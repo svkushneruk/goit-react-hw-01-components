@@ -1,0 +1,27 @@
+.transactionHistory {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+  /* border-collapse: collapse; */
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.tableHeadRow {
+  background-color: #38eeb1;
+}
+.tableHeadRow th {
+  padding: 10px 0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #38a5ee;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #4226dd;
+}
+
+td {
+  padding: 10px;
+}
