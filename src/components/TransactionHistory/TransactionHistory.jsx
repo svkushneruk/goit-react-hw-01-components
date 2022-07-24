@@ -1,18 +1,22 @@
 import { TransactionHistoryItem } from 'components/TransactionHistory/TransactionHistoryItem/TransactionHistoryItem';
-import css from 'components/TransactionHistory/TransactionHistory.module.css';
+import {
+  TransactionHistoryWrap,
+  TableTitleRow,
+  TableBodyWrap,
+} from 'components/TransactionHistory/TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className={css.transactionHistory}>
+    <TransactionHistoryWrap>
       <thead>
-        <tr className={css.tableHeadRow}>
+        <TableTitleRow>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
-        </tr>
+        </TableTitleRow>
       </thead>
 
-      <tbody>
+      <TableBodyWrap>
         {items.map(item => (
           <TransactionHistoryItem
             key={item.id}
@@ -21,7 +25,7 @@ export const TransactionHistory = ({ items }) => {
             currency={item.currency}
           />
         ))}
-      </tbody>
-    </table>
+      </TableBodyWrap>
+    </TransactionHistoryWrap>
   );
 };

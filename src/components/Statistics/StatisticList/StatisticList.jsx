@@ -1,9 +1,9 @@
 import { StatisticListItem } from 'components/Statistics/StatisticListItem/StatisticListItem';
-import css from 'components/Statistics/StatisticList/StatisticList.module.css';
+import { StatisticListWrap } from 'components/Statistics/StatisticList/StatisticList.styled';
 
 export const StatisticList = ({ items }) => {
   return (
-    <ul className={css.statList}>
+    <StatisticListWrap>
       {items.map(itemsItem => (
         <StatisticListItem
           key={itemsItem.id}
@@ -11,6 +11,6 @@ export const StatisticList = ({ items }) => {
           percentage={itemsItem.percentage}
         />
       ))}
-    </ul>
+    </StatisticListWrap>
   );
 };

@@ -1,9 +1,9 @@
 import { FriendListItem } from 'components/FriendList/FriendListItem/FriendListItem';
-import css from 'components/FriendList/FriendList.module.css';
+import { FriendListWrap } from 'components/FriendList/FriendList.styled';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className={css.friendList}>
+    <FriendListWrap>
       {friends.map(friend => (
         <FriendListItem
           key={friend.id}
@@ -12,6 +12,6 @@ export const FriendList = ({ friends }) => {
           isOnline={friend.isOnline}
         />
       ))}
-    </ul>
+    </FriendListWrap>
   );
 };

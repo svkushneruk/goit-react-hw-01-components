@@ -1,13 +1,16 @@
 import { StatisticList } from 'components/Statistics/StatisticList/StatisticList';
-import css from 'components/Statistics/Statistics.module.css';
+import {
+  StatisticsWrapper,
+  StatisticTitle,
+} from 'components/Statistics/Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <div>
-      <section className={css.statistics}>
-        {title && <h2 className={css.title}>{title}</h2>}
+      <StatisticsWrapper>
+        {title && <StatisticTitle>{title}</StatisticTitle>}
         <StatisticList items={stats} />
-      </section>
+      </StatisticsWrapper>
     </div>
   );
 };
